@@ -8,3 +8,5 @@ apt install python3-pip -y
 apt-get install python3-venv -y
 apt-get install python3-tk -y
 apt-get install pinta -y
+
+snap install pycharm-community --classic
