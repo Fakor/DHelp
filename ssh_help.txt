@@ -1,0 +1,11 @@
+### SSH login without password ###
+
+From http://linuxproblem.org/art_9.html
+
+First log in on A as user a and generate a pair of authentication keys. Do not enter a passphrase:
+
+a@A:~> ssh-keygen -t rsa
+
+a@A:~> ssh b@B mkdir -p .ssh
+
+a@A:~> cat .ssh/id_rsa.pub | ssh b@B 'cat >> .ssh/authorized_keys'
